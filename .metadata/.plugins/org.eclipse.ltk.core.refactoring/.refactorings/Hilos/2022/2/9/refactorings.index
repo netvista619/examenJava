@@ -5,3 +5,5 @@
 1645495738084	Delete element
 1645495815635	Rename compilation unit 'Hilo.java'
 1645498724152	Delete element
+1645500511708	Rename field 'countdownStarter'
+1645500555690	Rename type 'Countdown'

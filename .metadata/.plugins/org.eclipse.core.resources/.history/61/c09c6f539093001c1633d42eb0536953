@@ -1,0 +1,22 @@
+public class CuentaAtras implements Runnable {
+	int contador = 15;
+	boolean bandera = true;
+
+	public void run() {
+		while (bandera) {
+			System.out.println(contador);
+			contador--;
+			try {
+				Thread.sleep(1000);
+				if (contador == 0) {
+					bandera = false;
+					System.out.println("Tiempo Fuera!");
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+};

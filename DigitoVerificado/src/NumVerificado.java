@@ -1,30 +1,30 @@
 
 public class NumVerificado {
 	public static void main(String[] args) {
-		String cant = "19217";
-		int[] Cadena = new int[cant.length()];
-		int sumaT = 0;
-		for (int n = 0; n < cant.length(); n++) {
+		String num = "19217";
+		int[] cadena = new int[num.length()];
+		int sumaValores = 0;
+		for (int n = 0; n < num.length(); n++) {
+			//Secuenia de pasos 1 - 5
 			if ((n + 1) % 2 == 0) {
-
-				Cadena[n] = Integer.parseInt(cant.charAt(n) + "");
+				cadena[n] = Integer.parseInt(num.charAt(n) + "");
 			} else {
-				Cadena[n] = Integer.parseInt(cant.charAt(n) + "") * 2;
+				cadena[n] = Integer.parseInt(num.charAt(n) + "") * 2;
 			}
-			if (Cadena[n] >= 10) {
-				String rer = Cadena[n] + "";
-				Cadena[n] = Integer.parseInt(rer.charAt(0) + "") + Integer.parseInt(rer.charAt(1) + "");
+			if (cadena[n] >= 10) {
+				String rer = cadena[n] + "";
+				cadena[n] = Integer.parseInt(rer.charAt(0) + "") + Integer.parseInt(rer.charAt(1) + "");
 			}
 		}
-		for (int i = 0; i < Cadena.length; i++) {
-
-			sumaT = sumaT + Cadena[i];
+		for (int i = 0; i < cadena.length; i++) {
+			sumaValores = sumaValores + cadena[i];
 		}
-		if (sumaT % 10 == 0) {
+		//Verifiando Resultados
+		if (sumaValores % 10 == 0) {
 			System.out.println("El numero verificador es: " + 0);
 		} else {
-			System.out.println("El residuo es: " + (sumaT % 10));
-			System.out.println("El numero verificador es: " + (10 - (sumaT % 10)));
+			System.out.println("El residuo es: " + (sumaValores % 10));
+			System.out.println("El numero verificador es: " + (10 - (sumaValores % 10)));
 		}
 	}
 }
