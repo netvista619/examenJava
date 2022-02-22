@@ -1,0 +1,26 @@
+import java.net.*; 
+import java.io.*; 
+import java.io.DataOutputStream;
+import java.io.DataInputStream;
+/**
+ *
+ * @author shedy
+ */
+public class Servidor {     
+       public static void main(String[]args) 
+       {    ServerSocket servidor; 
+            Socket cliente; 
+            DataOutputStream out; 
+            DataInputStream in;
+         try { 
+               servidor = new ServerSocket(6800); 
+               System.out.println("Servidor iniciado"); 
+               cliente = servidor.accept(); 
+               out = new DataOutputStream(cliente.getOutputStream()); 
+               out.writeUTF("Bienvenido Cliente"); 
+                in = new DataInputStream(cliente.getInputStream()); 
+               System.out.println("El cliente dice: "+in.readUTF()); 
+             } catch (IOException ex) { 
+           System.out.println("Falla de conexion"); 
+        }     } 
+}

@@ -1,0 +1,51 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class Hilo extends Thread
+{
+   // boolean que pondremos a false cuando queramos parar el hilo
+   private boolean continuar = true;
+
+   // metodo para poner el boolean a false.
+   public void detenElHilo()
+   {
+      continuar=false;
+   }
+
+   // Metodo del hilo
+   public void run()
+   {
+      // mientras continuar ...
+      while (continuar)
+      {
+    	  timer = new Timer();
+
+    	  timer.schedule (nuevo DisplayCountdown (), 0, 1000);
+
+    	  }
+
+    	  DisplayCountdown clase extiende TimerTask {
+
+    	  int seconds = 60;
+
+    	  public void run () {
+
+    	  if (segundos> 0) {
+
+    	  System.out.println (segundos + "segundos en el reloj");
+
+    	  segundos--;
+
+    	  } Else {
+
+    	  System.out.println ( "Cuenta atrás terminó");
+
+    	  System.exit (0);
+
+    	  }
+
+    	  }
+    	  
+      }
+   }
+}

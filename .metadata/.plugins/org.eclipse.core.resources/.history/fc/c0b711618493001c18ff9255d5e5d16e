@@ -1,0 +1,8 @@
+public class Main {
+	public static void main(String args[]) {
+		Hilo elHilo = new Hilo();
+		Thread t = new Thread(elHilo);
+		elHilo.start();
+		elHilo.detenElHilo();
+	}
+}

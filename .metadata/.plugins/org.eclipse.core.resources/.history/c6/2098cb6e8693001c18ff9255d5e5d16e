@@ -1,0 +1,30 @@
+public class Main implements Runnable {
+
+	volatile boolean ejecutar = true;
+	
+	public void detener() {
+	    ejecutar = false;
+	}
+
+	public static void main(String[] args) {
+		Main ts = new Main();
+		Thread t = new Thread(ts);
+
+		t.start();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		ts.stop();
+	}
+
+	@Override
+	public void run() {
+	    while(ejecutar) {
+			Countdown cuenta = new Countdown();
+			cuenta.CuentaRegresiva();
+		}
+
+	}
+}

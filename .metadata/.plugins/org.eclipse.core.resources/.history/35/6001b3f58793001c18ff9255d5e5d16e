@@ -1,0 +1,51 @@
+
+public class Main {
+	public static void main(String[] args) {
+		String cant = "19217";
+		int[] Cadena = new int[cant.length()];
+		int sumaT = 0;
+		
+		for (int n = 0; n < cant.length(); n++) {
+
+			if ((n+1) % 2 == 0) {
+
+				Cadena[n] = Integer.parseInt(cant.charAt(n)+"");
+//				System.out.println(cant.charAt(n));
+				System.out.print(Cadena[n] + "  ");
+			} else {
+
+				Cadena[n] = Integer.parseInt(cant.charAt(n)+"")*2;
+//				System.out.println(cant.charAt(n));
+				System.out.print(Cadena[n]+"  ");
+ 
+			}
+			
+			if (Cadena[n] >= 10) {
+				String rer = Cadena[n]+"";
+				Cadena[n] =  Integer.parseInt(rer.charAt(0)+"") + Integer.parseInt(rer.charAt(1)+"");
+				System.out.println(Cadena[n]+"  ");
+			}
+
+		}
+		
+		for (int i = 0; i < Cadena.length; i++) {
+			
+			sumaT = sumaT +Cadena[i];
+			
+		}
+		System.out.println(sumaT);
+		
+		if (sumaT%10 == 0) {
+			
+			System.out.println("El numero verificador es: " + 0);
+		}else {
+			
+			System.out.println("El residuo es: " + (sumaT%10));
+			System.out.println("El numero verificador es: " + (10-(sumaT%10)));
+		}
+		
+		
+
+	}
+
+}

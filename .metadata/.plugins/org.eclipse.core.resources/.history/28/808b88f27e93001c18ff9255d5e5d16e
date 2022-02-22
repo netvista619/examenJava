@@ -1,0 +1,9 @@
+public class Main extends Thread {
+	public void run() {
+		System.out.println("Hello from athread!");
+	}
+
+	public static void main(String args[]) {
+		(new Main()).start();
+	}
+}

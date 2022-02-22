@@ -1,0 +1,34 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class Hilo extends Thread{
+   // boolean que pondremos a false cuando queramos parar el hilo
+   private boolean continuar = true;
+
+   // metodo para poner el boolean a false.
+   public void detenElHilo()
+   {
+      continuar=false;
+   }
+
+   // Metodo del hilo
+   public void run()
+   {
+      // mientras continuar ...
+      while (continuar)
+      {
+    	  static void cuentaRegresiva(int numero){
+    	        numero --;
+
+    	        if (numero > 0){
+    	            System.out.println(numero);
+    	            //Llamar la misma función
+    	            cuentaRegresiva(numero);
+    	        }else {
+    	            System.out.println("LLego hasta 0");
+    	        }
+    	    }
+    	}
+      
+   }
+}

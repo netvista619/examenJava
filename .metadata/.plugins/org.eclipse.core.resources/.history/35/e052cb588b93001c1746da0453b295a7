@@ -1,0 +1,9 @@
+Para ejecutarlo:
+Ejecuta el Main.java en eclipse como un java application
+Despues ya que esta corriendo abres una ventana CMD
+Escribes Telnet 127.0.0.1 9000
+y le das enter
+Despues se abre otra ventana y ahí escribes el mensaje que quieres mandar (no se vera lo que tecleas)
+Regresas a eclipse y veras en la consola el mensaje
+
+Nota: debes tener activado Telnet en "Activar o Desactivar caracteristicas de Windows"

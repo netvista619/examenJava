@@ -1,0 +1,10 @@
+public class Main {
+	public static void main(String args[]) {
+		MiHilo elHilo = new MiHilo();
+		elHilo.start();
+		// Ya tenemos el hilo arrancado
+		...
+		// Ahora vamos a detenerlo
+		elHilo.detenElHilo();
+	}
+}

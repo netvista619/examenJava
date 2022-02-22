@@ -1,0 +1,19 @@
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class CuentaRegresiva {							// Crea una clase pública
+  public static void main(String[] args){		// La entrada principal del programa.
+      Timer time=new Timer();					// Crear objeto de temporizador
+      MyTask task=new MyTask();					// Crear objeto MyTask
+      time.schedule(task, 0,1000);				// Especifica la operación sin demora, y el tiempo de actualización es 1S
+  }
+}
+class MyTask extends TimerTask{					// Crear una clase MyTask heredada de la clase primaria TimerTask
+  public void run(){							// método de ejecución, que contiene las tareas a realizar
+	  Date date = new Date();					// Crear objeto de fecha
+	  String time = String.format("%tF",date);	// Formato de fecha
+	  String time1 = String.format("%tT",date);
+	  System.out.println(time+" "+time1);		// Imprime la hora formateada
+  }
+}

@@ -1,0 +1,22 @@
+public class Hilo extends Thread
+{
+   // boolean que pondremos a false cuando queramos parar el hilo
+   private boolean continuar = true;
+
+   // metodo para poner el boolean a false.
+   public void detenElHilo()
+   {
+      continuar=false;
+   }
+
+   // Metodo del hilo
+   public void run()
+   {
+      // mientras continuar ...
+      while (continuar)
+      {
+          String texto = leeDelTeclado();
+          enviaAlServidor(texto);
+      }
+   }
+}

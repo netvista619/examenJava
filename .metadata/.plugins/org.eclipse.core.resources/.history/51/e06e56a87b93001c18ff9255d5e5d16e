@@ -1,0 +1,24 @@
+import java.util.*; // Importar todas las clases bajo el paquete java.util
+
+public class CueentaRegresiva { // Crea una clase pública
+	public static void main(String[] args) { // La entrada principal del programa.
+		ThreadTest a = new ThreadTest(); // Crear un objeto de clase ThreadTest
+		a.start(); // abrir hilo
+	}
+}
+
+class ThreadTest extends Thread { // Crear subclase de subprocesos
+	public void run() { // método de ejecución, que contiene las tareas a realizar
+		try { // Manejo de excepciones
+			while (true) { // Define un bucle infinito
+				Thread.sleep(1000); // El hilo se activa cada 1 segundo
+				Date date = new Date(); // Crear objeto de fecha
+				String time = String.format("%tF", date); // Formato de fecha
+				String time1 = String.format("%tT", date);
+				System.out.println(time + " " + time1); // Imprime la hora formateada
+			}
+		} catch (Exception e) { // captura para obtener información de excepción
+			System.out.println(" "); // Salida de información anormal
+		}
+	}
+}

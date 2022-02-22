@@ -1,0 +1,22 @@
+
+public class Palindromo {
+
+	public static void main(String[] args) {
+		String paldr = "Somoss o no somos";
+
+		String paldr2 = paldr.toLowerCase().replace(" ", "").replace(",", "").replace(".", " ");
+
+		String textInvrt = new StringBuilder(paldr2).reverse().toString();
+
+		if (textInvrt.equals(paldr2)) {
+
+			System.out.println("El txto " + paldr + " es un palindromo");
+		} else {
+
+			System.out.println("El txto " + paldr + " no es un palindromo");
+
+		}
+
+	}
+
+}

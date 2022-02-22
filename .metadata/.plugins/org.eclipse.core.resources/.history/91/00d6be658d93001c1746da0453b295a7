@@ -1,0 +1,18 @@
+import java.net.*; 
+import java.io.*; 
+
+public class Cliente {
+            public static void main(String[]args) 
+       {    Socket cliente; 
+            DataOutputStream salidaCliente; 
+            DataInputStream entradaCliente; 
+         try { 
+               cliente = new Socket("localhost",6800); 
+               salidaCliente = new DataOutputStream(cliente.getOutputStream()); 
+               salidaCliente.writeUTF("Hola Mundo Socket"); 
+               entradaCliente = new DataInputStream(cliente.getInputStream()); 
+               System.out.println("El servidor dice: "+entradaCliente.readUTF()); 
+            } catch (IOException ex) { 
+           System.out.println("Falla de conexion");
+        }        
+  }}

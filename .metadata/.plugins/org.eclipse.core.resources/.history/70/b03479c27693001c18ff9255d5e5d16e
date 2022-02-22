@@ -1,0 +1,17 @@
+
+public class Palindromo {
+
+	public static void main(String[] args) {
+		String palabra = "Somoss o no somos";
+		String limpiarPalabra = palabra.toLowerCase().replace(" ", "").replace(",", "").replace(".", " ");
+		String textInvrt = new StringBuilder(limpiarPalabra).reverse().toString();
+		if (textInvrt.equals(limpiarPalabra)) {
+			System.out.println("El txto " + palabra + " es un palindromo");
+		} else {
+			System.out.println("El txto " + palabra + " no es un palindromo");
+
+		}
+
+	}
+
+}

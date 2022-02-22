@@ -1,0 +1,6 @@
+public class Conejo extends Thread {
+	public void run()
+    {
+        // Código del hilo      
+    }  
+}

@@ -1,0 +1,35 @@
+public class Main implements Runnable {
+
+	private boolean stop = false;
+
+	public synchronized void stop() {
+		this.stop = true;
+		System.out.println("Thread stopped");
+	}
+
+	private synchronized boolean running() {
+		return this.stop == false;
+	}
+
+	public static void main(String[] args) {
+		Main ts = new Main();
+		Thread t = new Thread(ts);
+
+		t.start();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		ts.stop();
+	}
+
+	@Override
+	public void run() {
+		while (running()) {
+			Countdown cuenta = new Countdown();
+			cuenta.CuentaRegresiva()
+		}
+
+	}
+}

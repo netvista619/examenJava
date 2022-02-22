@@ -1,0 +1,41 @@
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import static java.util.concurrent.TimeUnit.SECONDS;
+
+public class Hilo extends Thread{
+   // boolean que pondremos a false cuando queramos parar el hilo
+   private boolean continuar = true;
+
+   // metodo para poner el boolean a false.
+   public void detenElHilo()
+   {
+      continuar=false;
+   }
+
+   // Metodo del hilo
+   public void run()
+   {
+      // mientras continuar ...
+      while (continuar)
+      {
+    	  final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+          final Runnable runnable = new Runnable() {
+              int countdownStarter = 20;
+
+              public void run() {
+
+                  System.out.println(countdownStarter);
+                  countdownStarter--;
+
+                  if (countdownStarter < 0) {
+                      System.out.println("Timer Over!");
+                      scheduler.shutdown();
+                  }
+              }
+          };
+          scheduler.scheduleAtFixedRate(runnable, 0, 1, SECONDS);
+      }
+   }
+}

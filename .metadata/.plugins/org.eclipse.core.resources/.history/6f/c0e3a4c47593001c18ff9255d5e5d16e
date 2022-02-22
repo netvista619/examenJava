@@ -1,0 +1,8 @@
+
+public class Tortuga extends Thread  
+{      
+    public void run()() 
+    {
+        // Código del hilo      
+    }  
+}
