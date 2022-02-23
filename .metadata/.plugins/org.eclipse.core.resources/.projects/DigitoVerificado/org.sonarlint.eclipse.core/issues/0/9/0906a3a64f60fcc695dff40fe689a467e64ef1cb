@@ -1,0 +1,10 @@
+
+i	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÎ»®şÿÿÿÿH³RMAJORZ
+CODE_SMELL
+d	java:S106"9Replace this use of System.out or System.err by a logger.(¶ÂÄüH°RMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(Ú´£‚ÿÿÿÿÿH±RMAJORZ
+CODE_SMELL
+±
+java:S1598"{This file "NumVerificado.java" should be located in "org\example\eamen" directory, not in "D:\examen\DigitoVerificado\src".(ëĞü8Ñƒ‡ ò/HµRCRITICALZ
+CODE_SMELL

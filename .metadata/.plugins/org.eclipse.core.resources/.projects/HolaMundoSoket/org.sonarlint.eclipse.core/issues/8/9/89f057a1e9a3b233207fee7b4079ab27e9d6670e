@@ -1,0 +1,12 @@
+
+i	java:S106"9Replace this use of System.out or System.err by a logger.(°ğ‹ÊüÿÿÿÿHğRMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÛÃ©úÿÿÿÿHòRMAJORZ
+CODE_SMELL
+q
+java:S2095"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(Ü°¤ÓHñRBLOCKERZBUG
+d	java:S106"9Replace this use of System.out or System.err by a logger.(”¥¯ğHïRMAJORZ
+CODE_SMELL
+ª
+java:S1598"tThis file "Servidor.java" should be located in "org\example\eamen" directory, not in "D:\examen\HolaMundoSoket\src".(ëĞü8›„– ò/HôRCRITICALZ
+CODE_SMELL
